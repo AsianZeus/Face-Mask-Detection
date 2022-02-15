@@ -1,10 +1,10 @@
 from fastapi import FastAPI, status, HTTPException, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
-import cv2
-from Classify import classify
+from ClassifyRetina import classify
 from io import BytesIO
 import numpy as np
+import cv2
 
 app = FastAPI()
 

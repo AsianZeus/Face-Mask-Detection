@@ -5,11 +5,11 @@ import numpy as np
 import cv2
 import os
 
-prototxtPath = os.path.sep.join(["face_detector", "deploy.prototxt"])
-weightsPath = os.path.sep.join(["face_detector",
+prototxtPath = os.path.sep.join(["Res10Face_Detector", "deploy.prototxt"])
+weightsPath = os.path.sep.join(["Res10Face_Detector",
     "res10_300x300_ssd_iter_140000.caffemodel"])
 net = cv2.dnn.readNet(prototxtPath, weightsPath)
-model = load_model("mask_detector.model")
+model = load_model("Models/mask_detector.model")
 
 def classify(image):
     (h, w) = image.shape[:2]
