@@ -36,11 +36,3 @@ def create_image(Image: bytes = File(...)):
     else:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND, detail="Image not found...")
-    
-   
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app)    
-     
-
-
